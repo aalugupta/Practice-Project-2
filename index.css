@@ -1,82 +1,83 @@
-.rock, .paper, .scissor{
+.rock, .paper, .scissor {
     width: 150px;
     height: 150px;
-    /* border-radius: 50%; */
     border-color: black;
     border-style: solid;
     border-width: 5px;
-    margin: 2.5rem;
+    margin: 2.5em;
     margin-top: 25px;
 }
-.boxes{
+
+.boxes {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
-.heading{
+
+.heading {
     text-align: center;
-    margin-top: 0cm;
+    margin-top: 0;
 }
-.rock{
-    background-image: url("rock.avif");
+
+.rock, .scissor, .paper {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 0px;
+    padding: 0;
+}
+.rock {
+    background-image: url("rock.avif");
 }
 .scissor{
     background-image: url("scissor.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 0px;
 }
 .paper{
     background-image: url("paper.jpeg");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 0px;
 }
-.hello{
+
+.hello {
     text-align: center;
     margin-top: 3px;
 }
-.cscore,.uscore{
+
+.cscore, .uscore {
     height: 20px;
     width: 100px;
     border: 3.5px solid black;
     text-align: center;
     margin-top: 0px;
 }
- .computer{
+
+.computer {
     height: 150px;
     width: 150px;
     border: 2px solid black;
-    border-radius: 70%; 
+    border-radius: 70%;
 }
 
-.flex{
+.flex, .flax {
     margin-top: 0px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.flex{
     column-gap: 500px;
-    margin-left: 250px;
 }
 .flax{
-    margin-left: 330px;
-    display: flex;
     column-gap: 650px;
-
 }
 .computer{
     margin: auto;
 }
-.result{
+
+.result {
     text-align: center;
 }
-.resu{
+
+.resu {
     display: flex;
     justify-content: center;
-    /* column-gap : 100px; */
 }
 .flash{
     background-image: url("rock.avif");
@@ -85,6 +86,7 @@
     background-repeat: no-repeat;
     padding: 0px;
 }
+
 .flash1{
     background-image: url("paper.jpeg");
     background-size: contain;
@@ -99,11 +101,29 @@
     background-repeat: no-repeat;
     padding: 0px;
 }
-body{
-    background-image:url("rock-paper-scissors-kid-hand-260nw-327624893.webp");
+body {
+    background-image: url("rock-paper-scissors-kid-hand-260nw-327624893.webp");
     background-size: cover;
     background-color: aliceblue;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-.two,.three{
-    margin-top: 0px;
+
+.two, .three {
+    margin-top: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@media (max-width: 1100px) {
+    .flex, .flax {
+        margin-left: 0;
+    }
+    .flax {
+        flex-direction: column;
+        align-items: center;
+    }
+  
 }
